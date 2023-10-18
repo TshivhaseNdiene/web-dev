@@ -1,0 +1,1100 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/* Create a beautiful base for your website */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+/* Let your links shine and stand out */
+a {
+  color: #f1cf0d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F5BF03;
+  text-decoration: underline;
+}
+
+/* Elevate your headings with style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to Top Button
+--------------------------------------------------------------*/
+/* The button to take you to the stars */
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #f8e006;
+  width: 40px;
+  height: 40px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #f8e006;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+/* A mesmerizing preloader for a seamless journey */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f8e006;
+  border-top-color: #efefef;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+/* Hypnotic rotation animation */
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Mobile Device Animation
+--------------------------------------------------------------*/
+/* Delightful animations for mobile devices */
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+/* The golden touch in your top bar */
+#topbar {
+  background: #191919;
+  font-size: 15px;
+  height: 40px;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Stylish contact information in the top bar */
+#topbar .contact-info a {
+  line-height: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+#topbar .contact-info a:hover {
+  color: #fff;
+}
+
+#topbar .contact-info i {
+  color: #f8e006;
+  line-height: 0;
+  margin-right: 5px;
+}
+
+#topbar .contact-info .phone-icon {
+  margin-left: 15px;
+}
+
+/* Social links that shine like stars */
+#topbar .social-links a {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 4px 12px;
+  display: inline-block;
+  line-height: 1px;
+  transition: 0.3s;
+}
+
+#topbar .social-links a:hover {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: rgba(25, 25, 25, 0.95);
+  transition: all 0.5s;
+  z-index:1;
+  height: 70px;
+}
+
+#header.fixed-top {
+  background: #0e0d0d;
+  backdrop-filter: blur(50px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+
+#header .logo img {
+  max-height: 100px;
+}
+
+/* Smooth scroll offset for a better experience */
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease-out;
+  backdrop-filter: blur(50px) brightness(1.2);
+  -webkit-backdrop-filter: blur(8px) brightness(1.2);
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar>ul>li {
+  margin-left: 5px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 15px 24px 15px;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  background: #f8e006;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  color: #191919;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #fff;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
+/* A mobile navigation menu that slides in with style */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  background: #191919;
+  overflow-y: auto;
+  transition: ease-in-out 0.2s;
+  padding-top: 18px;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-nav ul li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.mobile-nav ul li a {
+  font-size: 18px;
+  text-transform: none;
+  color: #fff;
+  display: block;
+  padding: 20px 20px 20px 30px;
+  transition: 0.3s;
+}
+
+.mobile-nav ul li a:hover {
+  color: #f8e006;
+}
+
+.mobile-nav ul li ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: all 0.2s;
+}
+
+.mobile-nav ul li ul li {
+  width: 200px;
+  display: list-item;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: left;
+}
+
+.mobile-nav ul li ul li a {
+  font-size: 15px;
+  text-transform: none;
+  color: #fff;
+  display: block;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.mobile-nav ul li ul li:hover a {
+  color: #f8e006;
+}
+
+.mobile-nav ul li ul li:last-child ul {
+  left: -100%;
+}
+
+/* Engaging submenu animation for mobile */
+.mobile-nav ul li:hover > ul {
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.mobile-nav ul li ul li:hover > ul {
+  left: calc(100% - 2px);
+}
+
+/* Close button for the mobile menu */
+.mobile-nav .mobile-nav-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  display: none;
+}
+
+.mobile-nav .mobile-nav-close i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 24px;
+  text-align: center;
+  background: #f8e006;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+}
+
+/* Show mobile navigation when active */
+.mobile-nav.active {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* A captivating welcome to your website */
+#hero {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-image.jpg") no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+/* Overlay to make your text pop */
+#hero::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 1;
+}
+
+/* Hero content container */
+#hero .hero-container {
+  display: table-cell;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Engaging hero content */
+#hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#hero h1 span {
+  color: #f8e006;
+}
+
+#hero h2 {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+.btn-get-started{
+  border-radius: 12px;
+}
+
+#hero .btn-get-started {
+  font-size: 18px;
+  padding: 10px 30px;
+  border: none;
+  background: #f8e006;
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Shiny hover effect for the call-to-action button */
+#hero .btn-get-started:hover {
+  background: #000;
+  color: #f8e006;
+  border-radius: 12px;
+}
+
+/* Engaging arrow-down animation */
+#hero .btn-get-started i {
+  padding-left: 0;
+  font-size: 20px;
+  border-radius: 12px;
+}
+
+#hero .btn-get-started:hover i {
+  padding-left: 10px;
+  border-radius: 12px;
+}
+
+#hero .hero-scroll a {
+  color: #fff;
+  margin-top: 100px;
+  display: block;
+  font-size: 24px;
+}
+
+#hero .hero-scroll a i {
+  font-size: 40px;
+  color: #f8e006;
+}
+
+#hero .hero-scroll a:hover {
+  color: #f8e006;
+}
+
+#hero .hero-scroll {
+  text-align: center;
+  display: block;
+  margin-top: 50px;
+}
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+/* A compelling about section */
+#about {
+  background: #f8e006;
+  color: #000;
+  padding: 60px 0;
+}
+img{
+  border-radius: 12px;
+}
+
+.team-img{
+  border-radius: 100%;
+}
+
+
+/* Fascinating about content */
+#about .content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+#about .content h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+#about .content p {
+  font-size: 15px;
+}
+
+#about .content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  font-size: 15px;
+}
+
+#about .content ul li::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  color: #f8e006;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+#about .content .icon-box {
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 0 29px 0 rgba(68, 68, 68, 0.15);
+  border-radius: 8px;
+}
+
+#about .content .icon-box i {
+  font-size: 48px;
+  line-height: 1;
+  color: #f8e006;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#about .content .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#about .content .icon-box .icon {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #f8e006;
+}
+
+/* Engaging icon box hover effect */
+#about .content .icon-box:hover {
+  background: #f8e006;
+}
+
+#about .content .icon-box:hover h4 {
+  color: #000;
+}
+
+#about .content .icon-box:hover .icon {
+  color: #000;
+}
+
+/* Compelling icon box hover effect */
+#about .content .icon-box .icon {
+  font-size: 36px;
+  color: #000;
+  transition: 0.3s;
+}
+
+#about .content .icon-box .icon:hover {
+  color: #f8e006;
+  transition: 0.3s;
+}
+
+#about .content .icon-box p {
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+#about .content .icon-box .icon i {
+  font-size: 36px;
+  display: block;
+  color: #f8e006;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 40px;
+}
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+/* A captivating services section */
+#services {
+  padding: 80px 0;
+  background: #f8e006;
+}
+
+/* Engaging services content */
+#services .icon-box {
+  background: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 0 29px 0 rgba(68, 68, 68, 0.15);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+#services .icon-box .icon {
+  font-size: 36px;
+  color: #f8e006;
+  margin-bottom: 10px;
+}
+
+#services .icon-box h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#services .icon-box .description {
+  font-size: 15px;
+  line-height: 28px;
+}
+
+/* Icon box hover effect */
+#services .icon-box:hover {
+  background: #f8e006;
+  box-shadow: 0 0 39px 0 rgba(68, 68, 68, 0.2);
+  transition: all 0.3s;
+}
+
+#services .icon-box:hover h4 {
+  color: #000;
+  transition: all 0.3s;
+}
+
+#services .icon-box:hover .description {
+  color: #000;
+  transition: all 0.3s;
+}
+
+/* Icon hover effect */
+#services .icon-box .icon:hover {
+  color: #000;
+  transition: 0.3s;
+}
+
+#services .icon-box .icon i {
+  font-size: 36px;
+  display: block;
+  color: #f8e006;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+/* A charismatic team section */
+#team {
+  padding: 60px 0;
+}
+
+/* Compelling team section title */
+#team .section-title {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* A captivating team container */
+#team .team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Engaging team member card */
+#team .team-member {
+  margin: 0 20px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 0 29px 0 rgba(68, 68, 68, 0.15);
+  transition: all 0.3s;
+}
+
+#team .team-member img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+#team .team-member .member-info {
+  padding: 30px 20px;
+}
+
+#team .team-member .member-info h4 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #000;
+}
+
+#team .team-member .member-info span {
+  font-style: italic;
+  display: block;
+  font-size: 14px;
+  color: #777;
+}
+
+#team .team-member .social {
+  margin-top: 20px;
+}
+
+#team .team-member .social a {
+  font-size: 18px;
+  display: inline-block;
+  color: #000;
+  transition: 0.3s;
+}
+
+/* Shiny social icon hover effect */
+#team .team-member .social a:hover {
+  color: #f8e006;
+}
+
+/* Compelling team member hover effect */
+#team .team-member:hover {
+  background: #f8e006;
+  box-shadow: 0 0 39px 0 rgba(68, 68, 68, 0.2);
+  transition: all 0.3s;
+}
+
+#team .team-member:hover img {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+#team .team-member:hover .member-info h4 {
+  color: #000;
+  transition: all 0.3s;
+}
+
+#team .team-member:hover .member-info span {
+  color: #000;
+  transition: all 0.3s;
+}
+
+/* Team member hover effect */
+#team .team-member .social a {
+  font-size: 18px;
+  display: inline-block;
+  color: #000;
+  transition: 0.3s;
+}
+
+#team .team-member .social a:hover {
+  color: #f8e006;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+/* A captivating clients section */
+#clients {
+  background: #f8e006;
+}
+
+/* Engaging clients content */
+#clients .clients-slider {
+  padding: 60px 0;
+  background: #fff;
+  transition: 0.3s;
+}
+
+/* Shiny hover effect for the clients' logos */
+#clients .clients-slider:hover {
+  background: #f8e006;
+  transition: 0.3s;
+}
+
+/* A striking clients' logo */
+#clients .clients-slider img {
+  transition: 0.3s;
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+/* Captivating hover effect for the clients' logos */
+#clients .clients-slider:hover img {
+  opacity: 1;
+  filter: grayscale(0%);
+  transition: 0.3s;
+}
+
+/* Hover effect for the clients' logos */
+#clients .clients-slider img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transition: 0.3s;
+}
+
+/* Shiny clients slider arrow icons */
+#clients .clients-slider i {
+  font-size: 48px;
+  line-height: 1;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+/* A mesmerizing hover effect for the clients' slider arrows */
+#clients .clients-slider i:hover {
+  background: #000;
+  color: #f8e006;
+  transition: 0.3s;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+/* A compelling contact section */
+#contact {
+  background: #f8e006;
+  padding: 60px 0;
+}
+
+/* Engaging contact form */
+#contact .contact-about {
+  font-size: 24px;
+}
+
+#contact .contact-about h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+#contact .contact-about h3 span {
+  color: #f8e006;
+}
+
+#contact .social-links {
+  margin-top: 30px;
+}
+
+#contact .social-links a {
+  font-size: 36px;
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  line-height: 1;
+  padding: 8px 0;
+  margin: 0 20px 20px 0;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* A mesmerizing hover effect for the social links */
+#contact .social-links a:hover {
+  background: #000;
+  color: #f8e006;
+  transition: 0.3s;
+}
+
+/* Shiny contact form */
+#contact .form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 29px 0 rgba(68, 68, 68, 0.15);
+  border-radius: 8px;
+}
+
+#contact .form h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+#contact .form h3 span {
+  color: #f8e006;
+}
+
+#contact .form input, #contact .form textarea {
+  padding: 10px;
+  border: 1px solid #dadada;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+#contact .form button[type="submit"] {
+  background: #f8e006;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 45px;
+  transition: 0.3s;
+}
+
+/* Shiny submit button hover effect */
+#contact .form button[type="submit"]:hover {
+  background: #000;
+  color: #f8e006;
+  transition: 0.3s;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+/* A captivating footer section */
+#footer {
+  background: #191919;
+  padding: 30px 0;
+}
+
+/* Engaging footer content */
+#footer .footer-logo {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#footer .footer-logo a {
+  color: #fff;
+}
+
+#footer .footer-logo img {
+  max-height: 60px;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #f8e006;
+  color: #000;
+  line-height: 1;
+  padding: 8px 0;
+  margin: 0 20px 20px 0;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* Shiny hover effect for the footer social links */
+#footer .social-links a:hover {
+  background: #000;
+  color: #f8e006;
+  transition: 0.3s;
+}
+
+/* A dazzling footer text */
+#footer .footer-text {
+  color: #fff;
+  font-size: 15px;
+  line-height: 28px;
+}
+
+/* Shiny hover effect for the footer social links */
+#footer .social-links a:hover {
+  background: #000;
+  color: #ffd700;
+  transition: 0.3s;
+}
+iframe{
+  border-radius: 12px;
+}
+    /* Style for the Why Us section */
+    #why-us {
+        background-color: #f7f7f7;
+        padding: 60px 0;
+    }
+
+    .why-us .box {
+        background: #ece8e8;
+        padding: 20px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+    }
+
+    .why-us .box:hover {
+        background: #eeff00;
+        color: #fff;
+    }
+
+    .why-us .box:hover span {
+        background: #fff;
+        color: #000000;
+    }
+
+    .why-us .box span {
+        display: block;
+        font-size: 36px;
+        font-weight: 700;
+        color: #e0e4cf;
+    }
+
+    .why-us .box h4 {
+        font-size: 20px;
+        color: #ffd200;
+        font-weight: 600;
+    }
+
+    .why-us .box p {
+        color: #7a7a7a;
+    }
